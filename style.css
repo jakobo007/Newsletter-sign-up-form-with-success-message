@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);  
+    --White: hsl(0, 0%, 100%);
+    --padding: 2rem;
+    --margin: 1rem;
+    --radius: .75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background-color: var(--Dark-Slate-Grey);
+    display: grid;
+    place-content: center;
+}
+
+.wrapper {
+    background-color: var(--White);
+    padding: var(--margin);
+    border-radius: var(--radius);
+    display: flex;
+    max-width: 60vw;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+}
+
+.right img {
+    width:  100%;
+}
+
+.left {
+    width: 60%;
+    padding: var(--padding);
+    margin-top: var(--margin);
+}
+
+ul {
+    margin-bottom: var(--margin);
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+li img {
+    margin-bottom: 5px;
+    margin-right: var(--radius);
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid var(--Grey);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    background-color: var(--Dark-Slate-Grey);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: var(--margin);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: var(--margin);
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: var(--margin);
+}
+
+span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--Tomato);
+}
+
+.error {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error_msg {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--Tomato);
+    display: none;
+}
+
+.success-card {
+    display: none;
+    width: 300px;
+    padding: var(--padding);
+}
+
+.success-card img {
+    width: 2rem;
+    margin-bottom: var(--margin);
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        flex-direction: column;
+        padding: 0;
+    }
+
+
+    .left {
+        padding: 0;
+        order: 1;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right {
+        order: -1;
+    }
+    
+    .right img{
+        content: url(./assets/images/illustration-sign-up-mobile.svg);
+    }
+}
