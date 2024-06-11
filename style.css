@@ -128,9 +128,14 @@ button:hover {
     display: none;
 }
 
+.success-card p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
 .success-card {
     display: none;
-    width: 300px;
+    width: 400px;
     padding: var(--padding);
 }
 
